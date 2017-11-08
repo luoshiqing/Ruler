@@ -8,18 +8,54 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UITextFieldDelegate {
 
+    
+    fileprivate var label: UILabel?
+    @IBOutlet weak var textField: UITextField!
+    
+    var calibration: CalibrationView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.textField.delegate = self
+        
+        label = UILabel(frame: CGRect(x: 0, y: 150, width: 200, height: 20))
+        label?.center.x = self.view.center.x
+        label?.textAlignment = .center
+        label?.text = "0"
+        self.view.addSubview(label!)
+        
+        let rect = CGRect(x: 15, y: 200, width: self.view.frame.width - 30, height: 50)
+        calibration = CalibrationView(frame: rect)
+        calibration?.calibrationWidth = 1
+        calibration?.max = 20
+        calibration?.valueHandle = { [weak self](value) in
+            self?.label?.text = "\(value)"
+            self?.textField.text = "\(value)"
+        }
+        //调用此方法开始
+        calibration?.show(value: 4.55, animation: true)
+        
+        self.view.addSubview(calibration!)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        let text = textField.text!
+        
+        if let textV = Float(text){
+            self.calibration?.showValue = CGFloat(textV)
+        }else{
+            self.calibration?.showValue = 0
+        }
+        
     }
 
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 
 }
 

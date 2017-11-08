@@ -12,6 +12,7 @@
 		FB4BB22E1FB2DF7A00C08E46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB4BB22C1FB2DF7A00C08E46 /* Main.storyboard */; };
 		FB4BB2301FB2DF7A00C08E46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB4BB22F1FB2DF7A00C08E46 /* Assets.xcassets */; };
 		FB4BB2331FB2DF7A00C08E46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB4BB2311FB2DF7A00C08E46 /* LaunchScreen.storyboard */; };
+		FB4BB23B1FB2DFA700C08E46 /* CalibrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4BB23A1FB2DFA700C08E46 /* CalibrationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		FB4BB22F1FB2DF7A00C08E46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB4BB2321FB2DF7A00C08E46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB4BB2341FB2DF7A00C08E46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB4BB23A1FB2DFA700C08E46 /* CalibrationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalibrationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				FB4BB2281FB2DF7900C08E46 /* AppDelegate.swift */,
 				FB4BB22A1FB2DF7900C08E46 /* ViewController.swift */,
+				FB4BB23A1FB2DFA700C08E46 /* CalibrationView.swift */,
 				FB4BB22C1FB2DF7A00C08E46 /* Main.storyboard */,
 				FB4BB22F1FB2DF7A00C08E46 /* Assets.xcassets */,
 				FB4BB2311FB2DF7A00C08E46 /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB4BB23B1FB2DFA700C08E46 /* CalibrationView.swift in Sources */,
 				FB4BB22B1FB2DF7900C08E46 /* ViewController.swift in Sources */,
 				FB4BB2291FB2DF7900C08E46 /* AppDelegate.swift in Sources */,
 			);
@@ -265,6 +269,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = E24W7RVK7M;
 				INFOPLIST_FILE = Calibration/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rainfo.Calibration;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -278,6 +283,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = E24W7RVK7M;
 				INFOPLIST_FILE = Calibration/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rainfo.Calibration;
 				PRODUCT_NAME = "$(TARGET_NAME)";
